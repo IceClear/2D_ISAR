@@ -32,13 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainF));
             this.a_box = new CCWin.SkinControl.SkinWaterTextBox();
             this.lab = new CCWin.SkinControl.SkinButton();
-            this.X_box = new CCWin.SkinControl.SkinWaterTextBox();
-            this.n_box = new CCWin.SkinControl.SkinWaterTextBox();
-            this.dim_box = new CCWin.SkinControl.SkinWaterTextBox();
-            this.wav = new CCWin.SkinControl.SkinButton();
+            this.b_box = new CCWin.SkinControl.SkinWaterTextBox();
+            this.c_box = new CCWin.SkinControl.SkinWaterTextBox();
+            this.d_box = new CCWin.SkinControl.SkinWaterTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.e_box = new CCWin.SkinControl.SkinWaterTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,11 +45,11 @@
             // 
             this.a_box.Location = new System.Drawing.Point(42, 76);
             this.a_box.Name = "a_box";
-            this.a_box.Size = new System.Drawing.Size(100, 21);
+            this.a_box.Size = new System.Drawing.Size(108, 21);
             this.a_box.TabIndex = 0;
             this.a_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.a_box.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.a_box.WaterText = "文件路径";
+            this.a_box.WaterText = "起始角（i1）";
             this.a_box.TextChanged += new System.EventHandler(this.a_box_TextChanged);
             this.a_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.a_box_KeyPress);
             // 
@@ -62,7 +61,7 @@
             this.lab.DownBack = null;
             this.lab.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lab.ForeColor = System.Drawing.Color.Aqua;
-            this.lab.Location = new System.Drawing.Point(500, 397);
+            this.lab.Location = new System.Drawing.Point(46, 332);
             this.lab.MouseBack = null;
             this.lab.Name = "lab";
             this.lab.NormlBack = null;
@@ -72,53 +71,39 @@
             this.lab.UseVisualStyleBackColor = false;
             this.lab.Click += new System.EventHandler(this.lab_Click);
             // 
-            // X_box
+            // b_box
             // 
-            this.X_box.Location = new System.Drawing.Point(42, 138);
-            this.X_box.Name = "X_box";
-            this.X_box.Size = new System.Drawing.Size(100, 21);
-            this.X_box.TabIndex = 2;
-            this.X_box.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.X_box.WaterText = "数据长度（X）";
-            this.X_box.TextChanged += new System.EventHandler(this.X_box_TextChanged);
-            this.X_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.X_box_KeyPress);
+            this.b_box.Location = new System.Drawing.Point(42, 120);
+            this.b_box.Name = "b_box";
+            this.b_box.Size = new System.Drawing.Size(108, 21);
+            this.b_box.TabIndex = 2;
+            this.b_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.b_box.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.b_box.WaterText = "起始角（i2）";
+            this.b_box.TextChanged += new System.EventHandler(this.X_box_TextChanged);
+            this.b_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.X_box_KeyPress);
             // 
-            // n_box
+            // c_box
             // 
-            this.n_box.Location = new System.Drawing.Point(42, 198);
-            this.n_box.Name = "n_box";
-            this.n_box.Size = new System.Drawing.Size(100, 21);
-            this.n_box.TabIndex = 3;
-            this.n_box.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.n_box.WaterText = "变化点数（n）";
-            this.n_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.n_box_KeyPress);
+            this.c_box.Location = new System.Drawing.Point(42, 164);
+            this.c_box.Name = "c_box";
+            this.c_box.Size = new System.Drawing.Size(108, 21);
+            this.c_box.TabIndex = 3;
+            this.c_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.c_box.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.c_box.WaterText = "成像累计角（r1）";
+            this.c_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.n_box_KeyPress);
             // 
-            // dim_box
+            // d_box
             // 
-            this.dim_box.Location = new System.Drawing.Point(42, 265);
-            this.dim_box.Name = "dim_box";
-            this.dim_box.Size = new System.Drawing.Size(100, 21);
-            this.dim_box.TabIndex = 4;
-            this.dim_box.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.dim_box.WaterText = "维度（dim）";
-            this.dim_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dim_box_KeyPress);
-            // 
-            // wav
-            // 
-            this.wav.BackColor = System.Drawing.Color.Transparent;
-            this.wav.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.wav.DownBack = null;
-            this.wav.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.wav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.wav.Location = new System.Drawing.Point(42, 357);
-            this.wav.MouseBack = null;
-            this.wav.Name = "wav";
-            this.wav.NormlBack = null;
-            this.wav.Size = new System.Drawing.Size(100, 25);
-            this.wav.TabIndex = 9;
-            this.wav.Text = "Stop";
-            this.wav.UseVisualStyleBackColor = false;
-            this.wav.Click += new System.EventHandler(this.wav_Click);
+            this.d_box.Location = new System.Drawing.Point(42, 208);
+            this.d_box.Name = "d_box";
+            this.d_box.Size = new System.Drawing.Size(108, 21);
+            this.d_box.TabIndex = 4;
+            this.d_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.d_box.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.d_box.WaterText = "成像累计角（r2）";
+            this.d_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dim_box_KeyPress);
             // 
             // label1
             // 
@@ -130,35 +115,28 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "label1";
             // 
-            // skinButton1
-            // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.skinButton1.Location = new System.Drawing.Point(42, 306);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.Size = new System.Drawing.Size(100, 25);
-            this.skinButton1.TabIndex = 18;
-            this.skinButton1.Text = "Start";
-            this.skinButton1.UseVisualStyleBackColor = false;
-            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(273, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(273, 95);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(568, 290);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
+            // 
+            // e_box
+            // 
+            this.e_box.Location = new System.Drawing.Point(42, 254);
+            this.e_box.Name = "e_box";
+            this.e_box.Size = new System.Drawing.Size(108, 21);
+            this.e_box.TabIndex = 20;
+            this.e_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.e_box.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.e_box.WaterText = "阈值（thr）";
             // 
             // MainF
             // 
@@ -169,13 +147,12 @@
             this.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.CaptionBackColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.e_box);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.skinButton1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.wav);
-            this.Controls.Add(this.dim_box);
-            this.Controls.Add(this.n_box);
-            this.Controls.Add(this.X_box);
+            this.Controls.Add(this.d_box);
+            this.Controls.Add(this.c_box);
+            this.Controls.Add(this.b_box);
             this.Controls.Add(this.lab);
             this.Controls.Add(this.a_box);
             this.ForeColor = System.Drawing.Color.Black;
@@ -183,6 +160,7 @@
             this.InnerBorderColor = System.Drawing.Color.Maroon;
             this.Name = "MainF";
             this.Text = "ISAR-2D";
+            this.TitleCenter = false;
             this.Activated += new System.EventHandler(this.MainF_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -195,13 +173,12 @@
 
         private CCWin.SkinControl.SkinWaterTextBox a_box;
         private CCWin.SkinControl.SkinButton lab;
-        private CCWin.SkinControl.SkinWaterTextBox X_box;
-        private CCWin.SkinControl.SkinWaterTextBox n_box;
-        private CCWin.SkinControl.SkinWaterTextBox dim_box;
-        private CCWin.SkinControl.SkinButton wav;
+        private CCWin.SkinControl.SkinWaterTextBox b_box;
+        private CCWin.SkinControl.SkinWaterTextBox c_box;
+        private CCWin.SkinControl.SkinWaterTextBox d_box;
         private System.Windows.Forms.Label label1;
-        private CCWin.SkinControl.SkinButton skinButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private CCWin.SkinControl.SkinWaterTextBox e_box;
 
     }
 }

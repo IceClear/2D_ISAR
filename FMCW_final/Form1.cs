@@ -18,6 +18,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Windows;
 using System.IO;
+using ISARtest;
 
 namespace FMCW_final
 {
@@ -58,7 +59,26 @@ namespace FMCW_final
 
         private void lab_Click(object sender, EventArgs e)
         {
-            
+
+            ISARtest.ISAR isar = new ISAR();
+            MWArray i1 = 0;
+            MWArray i2 = 3;
+            MWArray r1 = 15;
+            MWArray r2 = 12;
+            MWArray thr = 0.2;
+
+            try {
+                 i1 = Convert.ToInt32(a_box.Text);
+                 i2 = Convert.ToInt32(b_box.Text);
+                 r1 = Convert.ToInt32(c_box.Text);
+                 r2 = Convert.ToInt32(d_box.Text);
+                 thr = float.Parse(e_box.Text);
+            }
+            catch
+            {
+                //MessageBox.Show("请输入相关参数！", "警告");
+            }
+            isar.ISARtest(i1, i2, r1, r2, thr); 
         }
 
         private void wav_Click(object sender, EventArgs e)
@@ -107,9 +127,9 @@ namespace FMCW_final
             {
                 readData.readdata output = new readData.readdata();
                 MWArray a = a_box.Text;
-                MWArray X = Convert.ToInt32(X_box.Text);
-                MWArray n = Convert.ToInt32(n_box.Text);
-                MWArray dim = Convert.ToInt32(dim_box.Text);
+                MWArray X = Convert.ToInt32(b_box.Text);
+                MWArray n = Convert.ToInt32(c_box.Text);
+                MWArray dim = Convert.ToInt32(d_box.Text);
                 output.readData(a, X, n, dim);
             }
             catch

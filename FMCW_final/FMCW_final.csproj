@@ -42,6 +42,10 @@
     <Reference Include="IronPython.Modules">
       <HintPath>D:\IronPython-2.7.7-win\IronPython-2.7.7\IronPython.Modules.dll</HintPath>
     </Reference>
+    <Reference Include="ISARtest, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ISARtest.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Scripting">
       <HintPath>D:\IronPython-2.7.7-win\IronPython-2.7.7\Microsoft.Scripting.dll</HintPath>
     </Reference>
